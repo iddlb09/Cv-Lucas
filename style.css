@@ -1,0 +1,305 @@
+ /* Importando a fonte Boriboon */
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+ /* Definindo a fonte Boriboon para todo o site */
+ * {
+     font-family: 'Roboto', sans-serif;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     background-color: #f5f5f5;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     padding: 20px;
+ }
+
+ /* Container principal que simula uma folha A4 */
+ .resume-container {
+     width: 210mm;
+     min-height: 297mm;
+     background-color: white;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     padding: 30px;
+     position: relative;
+ }
+
+ /* Nome no topo - mais esticado */
+ .name {
+     text-align: center;
+     font-size: 32px;
+     font-weight: bold;
+     color: #188080;
+     text-transform: uppercase;
+     margin-bottom: 5px;
+     letter-spacing: 8px;
+     /* Aumentado ainda mais para esticar */
+     margin-left: -20px;
+     /* Estica para a esquerda */
+     margin-right: -20px;
+     /* Estica para a direita */
+ }
+
+ /* Subtítulo - mais esticado */
+ .subtitle {
+     text-align: center;
+     font-size: 12px;
+     font-weight: bold;
+     color: #3d3d3d;
+     letter-spacing: 4px;
+     /* Aumentado para esticar mais */
+     margin-bottom: 20px;
+     margin-left: -15px;
+     /* Estica para a esquerda */
+     margin-right: -15px;
+     /* Estica para a direita */
+ }
+
+ /* Linha horizontal */
+ hr {
+     border: none;
+     height: 2px;
+     background-color: #188080;
+     margin: 10px 0;
+ }
+
+ /* Seção Sobre - Centralizada e esticada */
+ .about {
+     text-align: center;
+     margin: 20px 0;
+     margin-left: -25px;
+     /* Estica para a esquerda */
+     margin-right: -25px;
+     /* Estica para a direita */
+ }
+
+ .section-title {
+     font-size: 14px;
+     font-weight: bold;
+     color: #188080;
+     margin: 15px 0 10px 0;
+     letter-spacing: 3px;
+     /* Esticado */
+ }
+
+ .about-text {
+     font-size: 11px;
+     font-weight: normal;
+     margin-bottom: 10px;
+     line-height: 1.4;
+     color: #3d3d3d;
+     max-width: 90%;
+     /* Aumentado para ocupar mais espaço */
+     margin-left: auto;
+     margin-right: auto;
+     letter-spacing: 0.8px;
+     /* Esticado */
+ }
+
+ /* Layout de duas colunas */
+ .two-columns {
+     display: flex;
+     margin-top: 40px;
+     /* antes era 20px */
+     gap: 40px;
+     /* novo espaçamento horizontal */
+ }
+
+ /* Coluna esquerda (maior) */
+ .left-column {
+     flex: 2;
+     padding-right: 20px;
+ }
+
+ /* Coluna direita (menor) */
+ .right-column {
+     flex: 1;
+     background-color: #f8f8f8;
+     padding: 15px;
+     border-radius: 5px;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Estilo para as experiências */
+ .experience-item {
+     margin-bottom: 40px;
+ }
+
+ .experience-title {
+     font-size: 11px;
+     font-weight: bold;
+     color: #188080;
+ }
+
+ .experience-subtitle {
+     font-size: 11px;
+     font-weight: normal;
+     color: #3d3d3d;
+     margin: 5px 0;
+ }
+
+ .experience-details {
+     font-size: 11px;
+     font-weight: normal;
+     line-height: 1.4;
+     color: #3d3d3d;
+ }
+
+ /* Estilo para as informações do card direito */
+ .info-section {
+     margin-bottom: 30px;
+ }
+
+ .info-title {
+     font-size: 12px;
+     font-weight: bold;
+     color: #188080;
+     margin-bottom: 8px;
+ }
+
+ .info-content {
+     font-size: 11px;
+     color: #3d3d3d;
+     line-height: 1.5;
+ }
+
+ /* Estilo para os itens com símbolo > */
+ .info-item {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 4px;
+ }
+
+ .info-symbol {
+     color: #188080;
+     margin-right: 6px;
+     font-weight: bold;
+ }
+
+ /* Linha no final da coluna esquerda */
+ .left-column::after {
+     content: '';
+     display: block;
+     height: 1px;
+     background-color: #3d3d3d;
+     margin-top: 20px;
+ }
+
+ .right-column {
+     flex: 1;
+     background-color: #f8f8f8;
+     padding: 25px;
+     /* antes era 15px */
+     border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+ }
+
+ .name {
+     margin-bottom: 10px;
+     /* antes era 5px */
+ }
+
+ .subtitle {
+     margin-bottom: 30px;
+     /* antes era 20px */
+ }
+
+ /* Botão de download */
+ .download-container {
+     text-align: center;
+     margin-top: 40px;
+ }
+
+ .download-btn {
+     display: inline-block;
+     background-color: #188080;
+     color: white;
+     text-decoration: none;
+     padding: 12px 25px;
+     border-radius: 6px;
+     font-size: 13px;
+     font-weight: bold;
+     letter-spacing: 1px;
+     transition: all 0.3s ease;
+ }
+
+ .download-btn:hover {
+     background-color: #0f5555;
+     transform: scale(1.05);
+ }
+
+ /* Esconde o botão na impressão */
+ @media print {
+     .download-container {
+         display: none;
+     }
+ }
+
+
+ /* Responsividade */
+ @media (max-width: 768px) {
+     .two-columns {
+         flex-direction: column;
+     }
+
+     .left-column {
+         padding-right: 0;
+         margin-bottom: 20px;
+     }
+
+     .resume-container {
+         width: 100%;
+         min-height: auto;
+     }
+
+     .about-text {
+         max-width: 100%;
+     }
+
+     .name {
+         letter-spacing: 4px;
+         /* Reduzido para telas menores */
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+     .subtitle {
+         letter-spacing: 2px;
+         /* Reduzido para telas menores */
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+     .about {
+         margin-left: 0;
+         margin-right: 0;
+     }
+
+     .section-title {
+         letter-spacing: 1.5px;
+         /* Reduzido para telas menores */
+     }
+
+     .about-text {
+         letter-spacing: 0.4px;
+         /* Reduzido para telas menores */
+     }
+ }
+
+ /* Estilo para impressão */
+ @media print {
+     body {
+         background-color: white;
+         padding: 0;
+     }
+
+     .resume-container {
+         box-shadow: none;
+         width: 100%;
+         min-height: auto;
+     }
+ }
